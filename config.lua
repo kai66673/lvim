@@ -16,6 +16,7 @@ require "user.colorscheme"
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
+require "user.which-key"
 
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
