@@ -9,6 +9,9 @@ lvim.builtin.which_key.mappings["o"] = { "<cmd>NvimTreeFocus<CR>", "Focus Nvim-T
 lvim.keys.normal_mode["<S-F12>"] = "<CMD>lua vim.lsp.buf.references()<cr>"
 lvim.keys.insert_mode["<S-F12>"] = "<CMD>lua vim.lsp.buf.references()<cr>"
 
+lvim.keys.normal_mode["<F2>"] = "<CMD>lua vim.lsp.buf.definition()<cr>"
+lvim.keys.insert_mode["<F2>"] = "<CMD>lua vim.lsp.buf.definition()<cr>"
+
 lvim.keys.normal_mode["<C-k>l"] = "<CMD>Telescope lsp_references<cr>"
 lvim.keys.insert_mode["<C-k>l"] = "<CMD>Telescope lsp_references<cr>"
 
