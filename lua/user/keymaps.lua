@@ -12,8 +12,12 @@ lvim.keys.insert_mode["<S-F12>"] = "<CMD>lua vim.lsp.buf.references()<cr>"
 lvim.keys.normal_mode["<F2>"] = "<CMD>lua vim.lsp.buf.definition()<cr>"
 lvim.keys.insert_mode["<F2>"] = "<CMD>lua vim.lsp.buf.definition()<cr>"
 
-lvim.keys.normal_mode["<C-k>l"] = "<CMD>Telescope lsp_references<cr>"
-lvim.keys.insert_mode["<C-k>l"] = "<CMD>Telescope lsp_references<cr>"
+-- Не работает, к сожалению...
+lvim.keys.normal_mode["<C-LeftMouse> <LeftMouse>"] = "<CMD>lua vim.lsp.buf.definition()<cr>"
+lvim.keys.insert_mode["<C-LeftMouse> <LeftMouse>"] = "<CMD>lua vim.lsp.buf.definition()<cr>"
+
+lvim.keys.normal_mode["<C-k>r"] = "<CMD>Telescope lsp_references<cr>"
+lvim.keys.insert_mode["<C-k>r"] = "<CMD>Telescope lsp_references<cr>"
 
 lvim.keys.normal_mode["<C-k>w"] = "<CMD>Telescope live_grep<cr>"
 lvim.keys.insert_mode["<C-k>w"] = "<CMD>Telescope live_grep<cr>"

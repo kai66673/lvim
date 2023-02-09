@@ -12,11 +12,11 @@ an executable
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
 
-require "user.colorscheme"
-require "user.options"
-require "user.keymaps"
-require "user.plugins"
-require "user.which-key"
+require("user.colorscheme")
+require("user.options")
+require("user.keymaps")
+require("user.plugins")
+require("user.which-key")
 
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -66,12 +66,14 @@ require "user.which-key"
 
 -- lvim.builtin.which_key.mappings["o"] = { "<cmd>NvimTreeFocus<CR>", "Focus Nvim-Tree" }
 
-
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
+
 lvim.builtin.project.active = false
+-- lvim.builtin.project.patterns = { "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", "pom.xml" }
+
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
@@ -94,7 +96,6 @@ lvim.builtin.treesitter.ensure_installed = {
     "java",
     "yaml",
 }
-
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
