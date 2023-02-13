@@ -27,3 +27,6 @@ lvim.keys.insert_mode["<C-k>f"] = "<CMD>Telescope find_files<cr>"
 
 lvim.keys.normal_mode["<C-k>s"] = "<CMD>Telescope lsp_dynamic_workspace_symbols<cr>"
 lvim.keys.insert_mode["<C-k>s"] = "<CMD>Telescope lsp_dynamic_workspace_symbols<cr>"
+
+lvim.keys.normal_mode["<S-F11>"] = "<CMD>SymbolsOutline<cr>"
+lvim.keys.insert_mode["<S-F11>"] = "<CMD>SymbolsOutline<cr>"
