@@ -1,13 +1,23 @@
 vim.g.cmake_link_compile_commands = 1
 
+----------------------------------------------------------------
+-- Плаины
 lvim.plugins = {
     { "cdelledonne/vim-cmake", },
     {
         'codota/tabnine-nvim',
         run = './dl_binaries.sh' },
     { 'simrat39/symbols-outline.nvim', },
+    {
+        'samodostal/image.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        },
+    },
 }
+----------------------------------------------------------------
 
+-- Настройка отладки
 local dap = require('dap')
 
 dap.adapters.python = {
@@ -25,6 +35,7 @@ dap.configurations.python = {
     },
 }
 
+-- Настройка tabnine-nvim
 require('tabnine').setup(
     {
         disable_auto_comment = true,
@@ -36,6 +47,7 @@ require('tabnine').setup(
     }
 )
 
+-- Настройка дерева классов
 local so_opts = {
     highlight_hovered_item = true,
     show_guides = true,
@@ -101,3 +113,17 @@ local so_opts = {
 }
 
 require("symbols-outline").setup(so_opts)
+
+-- Настройка просмотрщика изображений
+require('image').setup {
+    render = {
+        min_padding = 5,
+        show_label = true,
+        use_dither = true,
+        foreground_color = false,
+        background_color = false,
+    },
+    events = {
+        update_on_nvim_resize = true,
+    },
+}
