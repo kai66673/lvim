@@ -13,5 +13,14 @@ ls.add_snippets(nil, {
       text { "#!/usr/bin/env python", "" },
       insert(0),
     }),
+    snip("QtButtonBox", {
+      insert(1, "ok_button"),
+      text { " = QPushButton('Выполнить')", "" },
+      insert(2, "ok_button"),
+      text { ".setDefault(True)", "" },
+      insert(3, "cancel_button"),
+      text { " = QPushButton('Отмена')", "" },
+      insert(0),
+    })
   },
 })
